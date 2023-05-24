@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Header from './components/Header'
+import Selections from './components/Selections'
+import { useState } from 'react'
+import FretboardVisualizer from './components/FretboardVisualizer'
+import MusicStaff from './components/MusicStaff'
 
 function App() {
+
+  const [selection, setSelection] = useState ({
+    rootNote: 'C',
+    mode: 'major',
+    startingOctave: 4,
+    noteLength: .2
+  });
+  
+  const updateSelections = (key, label, value) => {
+    setSelection(prevSelection => ({
+      ...prevSelection,
+      [key]: value
+    }));
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1>
+        <Header />
+      </h1>
+      <Selections updateSelections={updateSelections} />
+      <FretboardVisualizer rootNote={selection.rootNote} mode={selection.mode}/>
+      <MusicStaff rootNote={selection.rootNote} mode={selection.mode} octave={selection.startingOctave}/>
     </div>
   );
 }
