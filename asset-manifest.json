@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dissonance/static/css/main.54d1def7.css",
+    "main.js": "/dissonance/static/js/main.05ef9c5d.js",
+    "static/js/787.cc6772eb.chunk.js": "/dissonance/static/js/787.cc6772eb.chunk.js",
+    "index.html": "/dissonance/index.html",
+    "main.54d1def7.css.map": "/dissonance/static/css/main.54d1def7.css.map",
+    "main.05ef9c5d.js.map": "/dissonance/static/js/main.05ef9c5d.js.map",
+    "787.cc6772eb.chunk.js.map": "/dissonance/static/js/787.cc6772eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54d1def7.css",
+    "static/js/main.05ef9c5d.js"
+  ]
+}
